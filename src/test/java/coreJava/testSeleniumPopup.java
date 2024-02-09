@@ -1,4 +1,5 @@
 package coreJava;
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -24,7 +25,7 @@ public class testSeleniumPopup {
 	{
 	
 	WebDriver driver=new FirefoxDriver();
-	WebDriverWait wait=new WebDriverWait(driver,10);
+	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(30));
 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	driver.get("http://localhost:8080/");	
 //	driver.findElement(By.linkText("Documentation")).click();

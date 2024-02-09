@@ -1,5 +1,6 @@
 package Algo;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -17,8 +18,7 @@ public class testSeleniumChrome {
 		
 		//System.setProperty("webdriver.chrome.driver", "D:\\ConduentAutomation\\apache-groovy-binary-3.0.7\\groovy-3.0.7\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		WebDriverWait wait= new WebDriverWait(driver, 30);	
-//		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(30));driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("http://www.google.com");	
         Thread.sleep(1000);
         driver.manage().window().maximize();		

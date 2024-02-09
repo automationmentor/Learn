@@ -1,5 +1,6 @@
 package Algo;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
@@ -21,7 +22,7 @@ public class testTravelAgency {
 		System.setProperty("webdriver.chrome.driver", workingDir+"\\src\\test\\resources\\drivers\\chromedriver.exe");
 		
 		WebDriver driver = new ChromeDriver();
-		WebDriverWait wait= new WebDriverWait(driver, 30);	
+		WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(30));	
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
 		// Open web application

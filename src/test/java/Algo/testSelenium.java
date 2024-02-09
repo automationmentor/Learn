@@ -7,16 +7,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
 
 
 public class testSelenium {
 	
 	public static void main(String args[])
 	{
-		System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
+		//System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
 		WebDriver driver = new ChromeDriver();
-		WebDriverWait wait= new WebDriverWait(driver, 30);	
-//		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		//WebDriverWait wait= new WebDriverWait(driver, 30);	
+		WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(30));
+		
+//		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);  // selenium 3
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // selenium 4
+		
         driver.get("http://localhost:8080");			
         driver.manage().window().maximize();		
         driver.findElement(By.id("j_username")).sendKeys("admin");

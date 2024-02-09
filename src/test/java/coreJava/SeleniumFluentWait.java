@@ -1,4 +1,5 @@
 package coreJava;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.*;
@@ -29,7 +30,7 @@ public class SeleniumFluentWait {
 	driver.get("http://localhost:8080/");
 	
 	// fluent wait
-	FluentWait wait=new FluentWait(driver).withTimeout(10, TimeUnit.SECONDS).pollingEvery(2, TimeUnit.SECONDS).ignoring(Exception.class);
+	FluentWait wait=new FluentWait(driver).withTimeout(Duration.ofSeconds(30)).pollingEvery(Duration.ofSeconds(30)).ignoring(Exception.class);
 	Function<WebDriver, Boolean> function = new Function<WebDriver, Boolean>() {
 		public Boolean apply(WebDriver arg0) {
 			WebElement element = arg0.findElement(By.id("dynamicColor"));

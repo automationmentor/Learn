@@ -1,6 +1,9 @@
 package helpers;
 
 import static org.junit.Assert.assertTrue;
+
+import java.time.Duration;
+
 import helpers.WebDriverManager;
 import helpers.LoggerManager;
 import org.openqa.selenium.Alert;
@@ -9,8 +12,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.interactions.HasInputDevices;
-import org.openqa.selenium.interactions.Keyboard;
+//import org.openqa.selenium.interactions.HasInputDevices;
+import org.openqa.selenium.interactions.KeyInput;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -23,7 +26,7 @@ public class PageObject {
 	public static Actions actions;
 	public static WebDriver driver;
 //	public static ObjectMap objmap;
-	public static Keyboard keyboard;		
+	public static KeyInput keyboard;		
 	
 	public PageObject(WebDriver driver){
 		try
@@ -31,9 +34,9 @@ public class PageObject {
 		log=new LoggerManager().getLogger();
 		log.info("Inside PageObject constructor: initializing WebDriverWait, actions, logger and page WebElements");
 		this.driver=driver;
-		wait = new WebDriverWait(driver, 5);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		actions=new Actions(driver);
-		keyboard=((HasInputDevices) driver).getKeyboard();
+		//keyboard=((HasInputDevices) driver).getKeyboard();
 		PageFactory.initElements(driver, this);
 		log.info("Inside PageObject constructor: initialized WebDriverWait, actions, logger and page WebElements");		
 		}

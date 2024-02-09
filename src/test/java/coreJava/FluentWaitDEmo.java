@@ -1,5 +1,6 @@
 package coreJava;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -18,8 +19,8 @@ public class FluentWaitDEmo {
 		driver.get(workingDir + "\\fluentWaitCommandDemoPage.html");
 
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-		wait.pollingEvery(250, TimeUnit.MILLISECONDS);
-		wait.withTimeout(2, TimeUnit.SECONDS);
+		wait.pollingEvery(Duration.ofSeconds(30));
+		wait.withTimeout(Duration.ofSeconds(30));
 
 		Function<WebDriver, Boolean> function = new Function<WebDriver, Boolean>() {
 			public Boolean apply(WebDriver arg0) {

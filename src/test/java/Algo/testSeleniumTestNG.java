@@ -1,5 +1,7 @@
 package Algo;
 
+import java.time.Duration;
+
 //import static org.junit.Assert.*;
 
 import java.util.concurrent.TimeUnit;
@@ -29,7 +31,8 @@ public class testSeleniumTestNG {
 		{
 		System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
 		driver = new ChromeDriver();
-		wait= new WebDriverWait(driver, 30);	
+		wait= new WebDriverWait(driver, Duration.ofSeconds(30));
+		
 		}
     	
 		@BeforeMethod
