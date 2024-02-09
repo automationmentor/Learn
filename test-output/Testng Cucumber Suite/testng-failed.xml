@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Testng Cucumber Suite]" parallel="tests">
+  <parameter name="browser" value="ie"/>
+  <test name="Run All Tests2(failed)" parallel="tests">
+    <parameter name="browser" value="ie"/>
+    <classes>
+      <class name="runner.TestRunnerTestNG1">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="setupBrowser"/>
+          <include name="setupBrowser"/>
+          <include name="tearDownClass"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- runner.TestRunnerTestNG1 -->
+    </classes>
+  </test> <!-- Run All Tests2(failed) -->
+  <test name="Run All Tests1(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="runner.TestRunnerTestNG1">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="setUpClass"/>
+          <include name="feature" invocation-numbers="0"/>
+          <include name="setupBrowser"/>
+          <include name="setupBrowser"/>
+          <include name="tearDownClass"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- runner.TestRunnerTestNG1 -->
+    </classes>
+  </test> <!-- Run All Tests1(failed) -->
+</suite> <!-- Failed suite [Testng Cucumber Suite] -->

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite annotations="JDK" name="Scenario1" parallel="tests" thread-count="2" verbose="1">
+     
+    <test junit="false" name="Scenario1" preserve-order="true"> 
+        <parameter name="browsertype" value="Chrome">  
+        <classes>
+            <class name="practice.GoogleTest">
+        </class></classes>
+    </parameter></test>
+      
+     
+    <test junit="false" name="Scenario2" preserve-order="true"> 
+        <parameter name="browsertype" value="IE">   
+        <classes>
+            <class name="practice.GoogleTest">
+        </class></classes>
+    </parameter></test>  
+</suite>

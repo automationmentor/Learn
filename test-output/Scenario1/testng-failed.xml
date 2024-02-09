@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Scenario1]" parallel="tests">
+  <parameter name="browsertype" value="IE"/>
+  <test name="Scenario2(failed)" parallel="tests">
+    <parameter name="browsertype" value="IE"/>
+    <classes>
+      <class name="practice.GoogleTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="testUntitled"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- practice.GoogleTest -->
+    </classes>
+  </test> <!-- Scenario2(failed) -->
+  <test name="Scenario1(failed)" parallel="tests">
+    <parameter name="browsertype" value="Chrome"/>
+    <classes>
+      <class name="practice.GoogleTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="testUntitled"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- practice.GoogleTest -->
+    </classes>
+  </test> <!-- Scenario1(failed) -->
+</suite> <!-- Failed suite [Scenario1] -->
